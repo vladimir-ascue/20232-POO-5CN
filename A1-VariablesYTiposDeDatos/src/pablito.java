@@ -12,6 +12,7 @@ public class pablito {
     //                                 en el cual fueron creadas
     static String nombre; // Declaración de variable
     static Boolean flag = true; // Declaración de variable + Asignacaion de Valor
+    static String apellido = null;
 
     // El método main es ESTÁTICO - No aceptan variable ni método NO ESTÁTICOS
     public static void main(String[] args) {
@@ -23,11 +24,11 @@ public class pablito {
             System.out.println(nombre);
             // Instruccion para imprimir en pantalla sin salto de linea
             System.out.print(flag);
-            String apellido = "Vladimir";
+            apellido = "Vladimir";
         }
         // for 2
         for (int i = 0; i < 15; i++) {
-            apellido
+
         }
 
     }

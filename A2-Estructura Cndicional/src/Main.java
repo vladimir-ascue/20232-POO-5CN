@@ -9,7 +9,7 @@ public class Main {
 //            System.out.println("Con fe no mas ...");
 //        }
         // CASESENSITYVE =
-        String nombre = "Karen";
+        // String nombre = "Karen";
         // if( nombre == "Karen"){
         // if(nombre.compareTo("karen") == 0){
         // Recomendada por el profe
@@ -27,15 +27,27 @@ public class Main {
 //            System.out.println("No es una cadena vacia");
 //        }
         System.out.println("*******************");
-        System.out.print("Ingrse su edad: "); // Promt >> Mensaje para indicar que hacer
-        int edad = new Scanner(System.in).nextInt();
+        System.out.print("Ingrese su edad: "); // Promt >> Mensaje para indicar que hacer
+        int edad = 0;
+        int cont = 1;
+        do {
+            try {
+                edad = new Scanner(System.in).nextInt();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            cont++;
+        }while(cont == 3);
+//        edad = new Scanner(System.in).nextInt();
+//        System.out.println("Tu edad es: " + edad);
+
         // 17 > Debes sacara tu LM
         // 18 - 20 > Te pasaste sera ultado
         // 21 a más > Eres omiso irás a prision
         if( ( edad >  0 ) && ( edad < 17 ) ){ // ||
             System.out.println("Eres mu chibolo(a)");
         }else{
-            if(edad == 17){
+            if(edad > 17){
                 System.out.println("Debes sacara tu LM");
             }else{
                 if( edad <= 20 ){

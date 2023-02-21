@@ -9,18 +9,35 @@ public class Main {
             try {
                 System.out.print(promt+": ");
                 entero = new Scanner(System.in).nextInt();
+                cont = 3;
             } catch (Exception e) {
                 System.out.println("Talla debe ser un numero entero mayor a 0, intentelo nuevamente: ");
+                cont++; // cont = cont + 1
             }
-            cont++;
-        }while(cont != 3);
+        } while(cont != 3); // este while temrina cuando cont = 3
         return entero;
     }
 
     public static void main(String[] args) {
+        // Contratacion de personal
         int edad = leerEntero("Edad");
+
+        if (( edad >= 18) && (edad < 45)){
+            System.out.println("Es contratable");
+        }else{
+            if ( edad < 18 ) {
+                System.out.println("Muy huahua ...");
+            }else {
+                System.out.println("Ya ta pasita ...");
+            }
+        }
+
+
         int talla = leerEntero("Talla");
+
         int peso = leerEntero("Peso");
+
+
 //        int cont = 1;
 //        do{
 //            try {

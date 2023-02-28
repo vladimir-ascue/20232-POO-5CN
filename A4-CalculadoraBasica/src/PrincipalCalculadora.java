@@ -2,13 +2,14 @@ import java.util.Scanner;
 
 public class PrincipalCalculadora {
     public static void menu(){
+        System.out.println("\n ############## MENU PRINCIPAL ##############\n");
         System.out.println("0- Salir");
         System.out.println("1- Sumar");
         System.out.println("2- Restar");
         System.out.println("3- Multiplicar");
         System.out.println("4- Dividir");
         System.out.print("   " +
-                ">> Ingrese una opción: ");
+                ">> Ingrese una opción");
     }
 
     public static int suma(int num1, int num2){
@@ -25,7 +26,7 @@ public class PrincipalCalculadora {
     }
 
     public static int leerEntero(String promt){
-        int entero = -1;
+        int entero = -999999999;
         int cont = 0;
         do{
             try {
@@ -33,7 +34,7 @@ public class PrincipalCalculadora {
                 entero = new Scanner(System.in).nextInt();
                 cont = 3;
             } catch (Exception e) {
-                System.out.println("Talla debe ser un numero entero mayor a 0, intentelo nuevamente: ");
+                System.out.println("Numero inválido, intentelo nuevamente: ");
                 cont++; // cont = cont + 1
             }
         } while(cont != 3); // este while temrina cuando cont = 3
@@ -48,7 +49,7 @@ public class PrincipalCalculadora {
             opcion = leerEntero("");
             switch (opcion){
                 case 0:
-                    System.out.print(" Adios. Vuelve pronto ...");
+                    System.out.println(" Adios. Vuelve pronto ...");
                     break;
                 case 1:
                     System.out.println(" VAMOS A SUMAR ");
@@ -58,21 +59,21 @@ public class PrincipalCalculadora {
                     break;
                 case 2:
                     System.out.println(" VAMOS A RESTAR ");
-                    num1 = new Scanner(System.in).nextInt();
-                    num2 = new Scanner(System.in).nextInt();
-                    resta(num1, num2);
+                    num1 = leerEntero("  Ingrese el minuendo");
+                    num2 = leerEntero("  Ingrese el sustraendo");
+                    System.out.println(resta(num1, num2));
                     break;
                 case 3:
                     System.out.println(" VAMOS A MULTIPLICAR ");
-                    num1 = new Scanner(System.in).nextInt();
-                    num2 = new Scanner(System.in).nextInt();
-                    multiplicacion(num1, num2);
+                    num1 = leerEntero("  Ingrese el Operando1");
+                    num2 = leerEntero("  Ingrese el Operando2");
+                    System.out.println(multiplicacion(num1, num2));
                     break;
                 case 4:
                     System.out.println(" VAMOS A DIVIDIR ");
-                    num1 = new Scanner(System.in).nextInt();
-                    num2 = new Scanner(System.in).nextInt();
-                    division(num1, num2);
+                    num1 = leerEntero("  Ingrese el dividendo");
+                    num2 = leerEntero("  Ingrese el divisor");
+                    System.out.println(division(num1, num2));
                     break;
                 default:
                     System.out.print("Opcion inválida. Intentelo nuevamente: ");

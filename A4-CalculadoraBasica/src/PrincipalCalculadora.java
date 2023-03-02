@@ -25,6 +25,14 @@ public class PrincipalCalculadora {
         return num1 / num2;
     }
 
+    public static int potencia(int base, int exp){
+        int poten = 1;
+        for (int i = 0; i < exp; i++) {
+            poten = base * base;
+        }
+        return poten;
+    }
+
     public static int leerEntero(String promt){
         int entero = -999999999;
         int cont = 0;

@@ -18,6 +18,7 @@ public class Main {
                 mostrarCalendario(dias[mes], iniMes[mes]);
                 break;
             case 2:
+                mostrarCalendario(dias[mes], iniMes[mes]);
                 break;
             case 3:
                 break;
